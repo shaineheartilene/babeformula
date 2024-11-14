@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'League Spartan', 'Arial', sans-serif;
+    background-image: url('background/loginbg.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.forgotpass-container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    margin: 0 15px; 
+}
+
+.logo-container {
+    position: absolute;
+    top: -60px; 
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+}
+
+.form-content {
+    margin-top: 80px; 
+}
+
+/* Form Header */
+h1 {
+    font-size: 1.8em;
+    color: #DB3D8C;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #F4B8CA;
+    border-radius: 30px;
+    background-color: #FAF1F8;
+    text-align: center;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #DB3D8C;
+}
+
+.input-group label {
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    background-color: white;
+    padding: 0 5px;
+    color: #9F2A65;
+    font-size: small;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #FF2768;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px; 
+}
+
+input[type="submit"]:hover {
+    background-color: #BC2967;
+}
+
+.back-to-login {
+    text-align: right; 
+    margin-top: 10px; 
+}
+
+.back-to-login a {
+    text-decoration: none;
+    color: #9F2A65;
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 15px; 
+}
+
+.back-to-login a:hover {
+    color: #DB3D8C;
+}

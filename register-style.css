@@ -1,0 +1,195 @@
+body {
+    background-image: url('background/loginbg.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    font-family: Arial, sans-serif;
+}
+
+/* Center the logo at the top */
+.logo-container {
+    position: absolute;
+    top:150px;; 
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 10;
+}
+
+/* Adjust logo size */
+.logo {
+    max-width: 50%;
+    height: auto;
+}
+
+/* Centered form container without background */
+.register-container {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    margin-top: 100px; 
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: none; 
+}
+
+/* Labels aligned left with smaller font size */
+label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    font-weight: 700;
+    color: #ee95ab;
+    font-size: small;
+}
+
+/* Input fields styling */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+select {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    background-color: #f4c2cd;
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+/* Input focus effect */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+select:focus {
+    background-color: #f3d7dd;
+    outline: none;
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    width: 60%; 
+    max-width: 200px;
+    padding: 12px;
+    background-color: #db3d8c;
+    font-size: large;
+    color: #faf1f8;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 900;
+    margin-top: 30px;
+    transition: background-color 0.3s ease; 
+}
+
+/* Hover effect for submit button */
+input[type="submit"]:hover {
+    background-color: #9f2a65;
+}
+
+.error {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 3px;
+}
+
+/* Row layout for input groups */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center; 
+    margin-bottom: 15px;
+}
+
+
+.input-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.gender-group {
+    align-items: flex-start; 
+    text-align: left; 
+}
+
+select {
+    text-align: left; 
+    padding-left: 15px; 
+    background-color: #f4c2cd;
+    border: none;
+    border-radius: 30px;
+    width: 100%; 
+    height: 40px;
+    box-sizing: border-box;
+}
+
+
+.account-message {
+    color: #ee95ab;
+    font-weight: normal; 
+}
+
+.login-link {
+    color: #9f2a65;
+    text-decoration: none;
+    font-weight: bold; 
+}
+
+.login-link:hover {
+    color: #ee95ab;
+}
+
+/* Success message container styling */
+.success-message {
+    background-color: #f4c2cd;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #9f2a65;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: 2px solid #db3d8c;
+}
+
+/* Success message text styling */
+.success-message p {
+    margin: 0;
+    padding: 10px;
+    font-size: 1.2em;
+    color: #9f2a65;
+}
+
+/* Styling for the login button inside the success message */
+.success-message .login-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #db3d8c;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the login button */
+.success-message .login-btn:hover {
+    background-color: #9f2a65;
+}

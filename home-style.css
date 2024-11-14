@@ -1,0 +1,453 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'League Spartan', 'Arial', sans-serif;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #FAF1F8;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    z-index: 100;
+    border-right: none; 
+    padding-top: 20px; 
+}
+
+.sidebar.collapsed {
+    width: 80px;
+}
+
+/* Logo and Toggle Button Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.logo {
+    max-width: 120px;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar.collapsed .logo {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar-toggle {
+    position: fixed;
+    top: 20px;
+    left: 260px;
+    width: 40px;
+    height: 40px;
+    background-color: #db3d8c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, left 0.3s ease;
+    z-index: 101;
+}
+
+.sidebar.collapsed + .sidebar-toggle {
+    left: 90px;
+}
+
+.sidebar-toggle:hover {
+    background-color: #9f2a65;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.menu li {
+    margin: 15px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 400;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px; 
+    transition: background-color 0.3s ease;
+    border-radius: 20px; 
+}
+
+.menu a i {
+    font-size: 20px;
+    color: #000;
+}
+
+.menu a:hover {
+    background-color: #F4B8CA;
+    border-radius: 25px; 
+}
+
+
+.menu a.logout {
+    color: #9F2A65;
+}
+
+.menu a.logout i {
+    color: #9F2A65; 
+}
+
+.menu a.logout:hover {
+    background-color: #F4B8CA; 
+}
+
+.menu a.active {
+    background-color: #F4B8CA; 
+    border-radius: 25px; 
+    font-weight: bold;
+    color: #000; 
+}
+
+.menu a.active i {
+    color: #000; 
+}
+
+
+.sidebar.collapsed a span {
+    display: none;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 250px;
+    width: calc(100% - 250px);
+    height: 70px;
+    background-color: #FFE3F1;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    transition: left 0.3s ease, width 0.3s ease;
+    z-index: 100;
+    justify-content: space-between;
+}
+
+.navbar-title {
+    font-size: 1.5em;
+    color: #9F2A65;
+    font-weight: bold;
+    margin: 0 auto;
+}
+.profile-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    text-decoration: none;
+    background-color: #db3d8c;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.profile-icon i {
+    font-size: 15px;
+    padding-left: 3px;
+    color: white;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.profile-icon {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.profile-icon i {
+    margin-right: 5px;
+}
+
+.profile-icon:hover {
+    color: #ddd;
+}
+
+/* Show the dropdown on hover */
+.profile-icon:hover + .profile-dropdown {
+    display: block;
+}
+
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 50px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 101;
+}
+.profile-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    text-decoration: none;
+    background-color: #db3d8c;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.profile-icon i {
+    font-size: 15px;
+    padding-left: 3px;
+    color: white;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.profile-icon {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.profile-icon i {
+    margin-right: 5px;
+}
+
+.profile-icon:hover {
+    color: #ddd;
+}
+
+/* Show the dropdown on hover */
+.profile-icon:hover + .profile-dropdown {
+    display: block;
+}
+
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 50px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 101;
+}
+
+.sidebar.collapsed ~ .navbar {
+    left: 80px;
+    width: calc(100% - 80px);
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 90px 30px 30px; 
+    background-color: #FBF1F8;
+    min-height: 100vh;
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar.collapsed ~ .main-content {
+    margin-left: 80px;
+}
+
+.hero-section {
+    background-image: url('background/stripe.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; 
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+.hero-content {
+    width: 50%; 
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    color: #DB3D8C;
+    margin-bottom: 15px;
+}
+
+.hero-section p {
+    font-size: 1.1em;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+
+.hero-image {
+    width: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%; 
+    max-width: 400px; 
+    height: auto;
+}
+
+
+.btn-learn-more {
+    background-color: #FF2768;
+    color: #F5F5F5;
+    padding: 12px 30px;
+    border-radius: 8px;
+    border: 1px solid #BC2967;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-learn-more:hover {
+    background-color: #BC2967;
+}
+
+.reviews-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.review-card {
+    background-color: #E7D5F7;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 100% 100% 0 0 ; /* Arch-up effect */
+    height: 350px; 
+    width: 100%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.review-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.review-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top: 0px; 
+    background-color: white;
+    padding: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%); /* center the image horizontally */
+}
+
+.review-card p {
+    font-size: 1em;
+    margin: 60px 0 10px; /* margin to prevent overlap with the image */
+    color: #333;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    line-height: 1.5; 
+}
+
+.review-card span {
+    font-weight: bold;
+    color: #9F2A65;
+    margin-top: auto; 
+    text-align: center;
+    margin-bottom: 10px; 
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 80px;
+    }
+
+    .navbar {
+        left: 80px;
+        width: calc(100% - 80px);
+    }
+
+    .main-content {
+        margin-left: 80px;
+    }
+
+    .hero-section h1 {
+        font-size: 1.8em;
+    }
+}

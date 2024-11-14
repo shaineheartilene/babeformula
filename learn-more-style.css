@@ -1,0 +1,311 @@
+body {
+    margin: 0;
+    font-family: 'League Spartan', 'Arial', sans-serif;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #FAF1F8;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    z-index: 100;
+    border-right: none; 
+    padding-top: 20px; 
+}
+
+.sidebar.collapsed {
+    width: 80px;
+}
+
+/* Logo and Toggle Button Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.logo {
+    max-width: 120px;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar.collapsed .logo {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar-toggle {
+    position: fixed;
+    top: 20px;
+    left: 260px;
+    width: 40px;
+    height: 40px;
+    background-color: #db3d8c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, left 0.3s ease;
+    z-index: 101;
+}
+
+.sidebar.collapsed + .sidebar-toggle {
+    left: 90px;
+}
+
+.sidebar-toggle:hover {
+    background-color: #9f2a65;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.menu li {
+    margin: 15px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 400;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px; 
+    transition: background-color 0.3s ease;
+    border-radius: 20px; 
+}
+
+.menu a i {
+    font-size: 20px;
+    color: #000;
+}
+
+.menu a:hover {
+    background-color: #F4B8CA;
+    border-radius: 25px; 
+}
+
+
+.menu a.logout {
+    color: #9F2A65;
+}
+
+.menu a.logout i {
+    color: #9F2A65; 
+}
+
+.menu a.logout:hover {
+    background-color: #F4B8CA; 
+}
+
+.menu a.active {
+    background-color: #F4B8CA; 
+    border-radius: 25px; 
+    font-weight: bold;
+    color: #000; 
+}
+
+.menu a.active i {
+    color: #000; 
+}
+
+
+.sidebar.collapsed a span {
+    display: none;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 250px;
+    width: calc(100% - 250px);
+    height: 70px;
+    background-color: #FFE3F1;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    transition: left 0.3s ease, width 0.3s ease;
+    z-index: 100;
+    justify-content: space-between;
+}
+
+.navbar-title {
+    font-size: 1.5em;
+    color: #9F2A65;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    right: 20px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+}
+
+.profile-icon {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #9F2A65;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.profile-icon i {
+    margin-right: 5px;
+}
+
+.profile-icon:hover {
+    color: #DB3D8C;
+}
+
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 101;
+}
+
+.profile-dropdown.active {
+    display: block;
+}
+
+.sidebar.collapsed ~ .navbar {
+    left: 80px;
+    width: calc(100% - 80px);
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 90px 30px 30px; 
+    background-color: #FBF1F8;
+    min-height: 100vh;
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar.collapsed ~ .main-content {
+    margin-left: 80px;
+}
+
+
+/* Main Content Styling */
+.main-content {
+    margin-left: 250px;
+    padding: 90px 30px 30px; 
+    background-color: #FBF1F8;
+    min-height: 100vh;
+    transition: margin-left 0.3s ease;
+}
+
+/* Section Styling */
+.about-section, .mission-section, .vision-section, .founder-section, .origin-section, 
+.sustainability-section, .innovation-section, .testimonials-section {
+    background-color: #FFF7FB;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2, .mission-section h2, .vision-section h2, .founder-section h2, .origin-section h2, 
+.sustainability-section h2, .innovation-section h2, .testimonials-section h2 {
+    font-size: 1.8em;
+    color: #DB3D8C;
+    margin-bottom: 15px;
+}
+
+.about-section p, .mission-section p, .vision-section p, .founder-section p, .origin-section p, 
+.sustainability-section p, .innovation-section p, .testimonials-section p {
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Testimonials Section */
+.testimonials-section blockquote {
+    background-color: #F4B8CA;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-style: italic;
+    color: #333;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials-section blockquote:before {
+    content: "“";
+    font-size: 3em;
+    color: #DB3D8C;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+}
+
+.testimonials-section blockquote:after {
+    content: "”";
+    font-size: 3em;
+    color: #DB3D8C;
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 80px;
+        padding: 60px 20px;
+    }
+
+    .about-section, .mission-section, .vision-section, .founder-section, .origin-section,
+    .sustainability-section, .innovation-section, .testimonials-section {
+        padding: 20px;
+    }
+
+    .about-section h2, .mission-section h2, .vision-section h2, .founder-section h2, .origin-section h2, 
+    .sustainability-section h2, .innovation-section h2, .testimonials-section h2 {
+        font-size: 1.6em;
+    }
+
+    .about-section p, .mission-section p, .vision-section p, .founder-section p, .origin-section p, 
+    .sustainability-section p, .innovation-section p, .testimonials-section p {
+        font-size: 1em;
+    }
+}

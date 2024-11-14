@@ -1,0 +1,48 @@
+body {
+    font-family: 'League Spartan', 'Arial', sans-serif;
+    background-color: #FAF1F8;
+    margin: 0;
+}
+
+.dashboard-container {
+    padding: 40px;
+    background-color: #FFFFFF;
+}
+
+h1 {
+    font-size: 2em;
+    color: #DB3D8C;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #FF2768;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    color: #BC2967;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}

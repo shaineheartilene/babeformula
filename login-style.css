@@ -1,0 +1,136 @@
+/* background settings */
+body {
+    background-image: url('background/loginbg.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+}
+
+.logo-container {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 10; /* it stays above other content */
+}
+
+/* logo size */
+.logo {
+    max-width: 50%;
+    height: auto;
+}
+
+/* under the logo */
+.login-header {
+    margin-top: 10px; /* spacing from the logo */
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    font-weight: 700;
+    color: #ee95ab;
+    font-size: small;
+}
+
+/*input field styling */
+input[type="text"],
+input[type="password"] {
+    width: 70%; 
+    max-width: 300px; 
+    height: 35px; 
+    padding: 8px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 30px;
+    background-color: #f4c2cd;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    background-color: #f3d7dd;
+    outline: none;
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    width: 70%; 
+    max-width: 200px;
+    padding: 10px;
+    background-color: #db3d8c;
+    font-size: large;
+    color: #faf1f8;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 900;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #9f2a65;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.success-message {
+    color: green;
+    margin-bottom: 10px;
+}
+
+.forgot-pass {
+    margin-top: 15px;
+}
+
+.forgot-pass a {
+    text-decoration: none;
+    color: #9f2a65; 
+    margin-right: 20px;
+}
+
+.forgot-pass a:hover {
+    color: #ee95ab; 
+    text-decoration: underline;
+}
+
+.forgot-pass a:last-child {
+    margin-right: 0; 
+}
+
+.register-link {
+    color: #9f2a65; 
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.register-link:hover {
+    color: #ee95ab; 
+}

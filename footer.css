@@ -1,0 +1,137 @@
+.footer {
+    position: relative;
+    background: url('footer/footer.png') no-repeat center center;
+    background-size: 100px 100%; /* Changed from 'cover' */
+    padding: 200px 40px 100px; /* Increased padding */
+    height: auto; /* Added height property */
+    color: #9f2a65;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .footer h2 {
+    color: #db3d8c;
+    font-size: 3em;
+    margin-bottom: 45px;
+  }
+  
+  .footer p {
+    color: #9f2a65;
+    font-size: 1.1em;
+    margin: 5px 0;
+  }
+  
+  .footer a {
+    color: #9f2a65;
+    text-decoration: none;
+    display: inline-block;
+    margin: 3px 0;
+  }
+  
+  .footer b {
+    color: #000000;
+    text-decoration: none;
+    display: inline-block;
+    margin: 3px 0;
+  }
+  
+  .footer .social-links a {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 15px;
+    font-size: 1.1em;
+    color: #db3d8c;
+  }
+  
+  .footer .social-links a i {
+    margin-right: 8px;
+  }
+  
+  .footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background-size: contain;
+    z-index: -1; /* Changed z-index to prevent overlap */
+  }
+  
+  .footer-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .footer a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid #000000;
+  }
+  
+  .footer p:last-child {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #000;
+  }
+  
+  .icon-background {
+    background-color: #EE95AB;
+    padding: 8px;
+    border-radius: 20px;
+    margin: 14px 0;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icon-background a {
+    display: flex;
+    align-items: center;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  .icon-background i {
+    margin-right: 8px;
+  }
+  
+  .social-background {
+    background-color: #EE95AB;
+    padding: 12px;
+    border-radius: 20px;
+    margin: 14px 0;
+    max-width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .social-background a {
+    display: block;
+    color: #000000;
+    font-size: 18px;
+    margin: 5px 0;
+    text-decoration: none;
+  }
+  
+  .social-background a:hover {
+    border-bottom: 1px solid #000000;
+  }
+  
+  @media (max-width: 768px) {
+    .footer {
+      padding: 60px 10px 30px;
+    }
+    .footer h2 {
+      font-size: 1.8em;
+    }
+    .footer p {
+      font-size: 1em;
+    }
+    .footer .social-links a {
+      margin: 0 10px;
+      font-size: 1em;
+    }
+  }
